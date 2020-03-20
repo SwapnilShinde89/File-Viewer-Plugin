@@ -10,6 +10,7 @@ import android.webkit.URLUtil;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import android.support.v4.content.FileProvider;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -77,7 +78,7 @@ public class DocumentPreview extends CordovaPlugin {
 
             fileUri = FileProvider.getUriForFile(cordova.getActivity(), cordova.getActivity().getPackageName() + ".opener.provider", documentFile);
         }
-
+    
         String mimeType = cR.getType(fileUri);
         intent.setDataAndType(fileUri, mimeType);
         intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NO_HISTORY);
