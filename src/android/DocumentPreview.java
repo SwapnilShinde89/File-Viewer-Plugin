@@ -10,7 +10,6 @@ import android.webkit.URLUtil;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
-import android.support.v4.content.FileProvider;
 
 import org.json.JSONArray;
 import org.json.JSONException;
